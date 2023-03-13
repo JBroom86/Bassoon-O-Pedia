@@ -11,6 +11,10 @@ const connectLiveReload = require("connect-livereload");
 --------------------------------------------------------------- */
 const db = require('./models');
 
+/* Require the routes in the controllers folder
+--------------------------------------------------------------- */
+const bsnCtrl = require('./controllers/bassoons')
+
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -60,6 +64,10 @@ app.get('/seed', function (req, res) {
                 })
         })
 });
+
+// This tells our app to look at the `controllers/pets.js` file 
+// to handle all routes that begin with `localhost:3000/pets`
+app.use('/bassoons', bsnCtrl)
 
 
 /* Tell the app to listen on the specified port
