@@ -7,7 +7,8 @@ const bassoonFoxSchema = new mongoose.Schema({
     model: { type: String, required: true },
     details: { type: String, required: true},
     serialNumber: { type: Number, required: true},
-    history: { type: String }
+    history: { type: String },
+    photo: { type: String }
 });
 
 // Exporting the schema as a Mongoose model

@@ -46,6 +46,21 @@ app.get('/', function (req, res) {
     res.send('Bassoon-O-Pedia')
 });
 
+// When a GET request is sent to `/seed`, the bassoonFox collection is seeded
+app.get('/seed', function (req, res) {
+    // Remove any existing pets
+    db.Fox.deleteMany({})
+        .then(removedFoxBsn => {
+            console.log(`Removed ${removedFoxBsn.deletedCount} Fox bassoons`)
+            // Seed the Fox Bassoons collection with the seed data
+            db.Fox.insertMany(db.seedFox)
+                .then(addedFoxBsns => {
+                    console.log(`Added ${addedFoxBsns.length} Fox bassoons to the database.`)
+                    res.json(addedFoxBsns)
+                })
+        })
+});
+
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
