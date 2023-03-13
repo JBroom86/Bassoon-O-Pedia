@@ -66,7 +66,7 @@ app.get('/seed', function (req, res) {
 });
 
 // This tells our app to look at the `controllers/pets.js` file 
-// to handle all routes that begin with `localhost:3000/pets`
+// to handle all routes that begin with `localhost:3000/bassoons`
 app.use('/bassoons', bsnCtrl)
 
 

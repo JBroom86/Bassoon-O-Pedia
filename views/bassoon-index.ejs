@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: 'Bassoon-O-Pedia'}) %>
+    <link rel="stylesheet" href="/styles/pet-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <h1>Fox Bassoons</h1>
+            <ul>
+                <% for (let fox of bassoonFox) { %>
+                <li>
+                    <figure>
+                        <img src="<%= fox.photo %>">
+                        <figcaption>
+                            <h4><%= fox.model %> - #<%= fox.serialNumber %> </h4>
+                            <p><%= fox.make %>, <%= fox.model %></p>
+                            <a href="/bassoons/<%= fox._id %>">Learn More</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

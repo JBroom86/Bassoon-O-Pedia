@@ -1,11 +1,11 @@
 /* 
 ---------------------------------------------------------------------------------------
-NOTE: Remember that all routes on this page are prefixed with `localhost:3000/pets`
+NOTE: Remember that all routes on this page are prefixed with `localhost:3000/bassoons`
 ---------------------------------------------------------------------------------------
 */
 
 
-/* Require modules
+/* Require modules - the router method sets up routes outside of server.js
 --------------------------------------------------------------- */
 const express = require('express')
 const router = express.Router()
@@ -20,16 +20,19 @@ const db = require('../models')
 --------------------------------------------------------------- */
 // Index Route (GET/Read): Will display all pets
 router.get('/', function (req, res) {
-    db.Fox.find({})
-        .then(bsnFox => res.json(bsnFox))
+    res.render('bassoon-index')
 })
 
 
-// Show Route (GET/Read): Will display an individual pet document
+// Show Route (GET/Read): Will display an individual bassoonFox document
 // using the URL parameter (which is the document _id)
 router.get('/:id', function (req, res) {
     db.Fox.findById(req.params.id)
-        .then(fox => res.json(fox))
+        .then(fox => {
+            res.render('bassoon-details', {
+                bassoonFox: fox
+            })
+        })
         .catch(() => res.send('404 Error: Page Not Found'))
 })
 

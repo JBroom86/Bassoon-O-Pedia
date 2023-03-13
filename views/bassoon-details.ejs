@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: `${fox.model} | Bassoon-O-Pedia`}) %>
+    <link rel="stylesheet" href="/styles/fox-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= fox.photo %>">
+        <section>
+            <p><strong>Make:</strong> <%= fox.make %></p>
+            <p><strong>Model:</strong> <%= fox.model %></p>
+            <p><strong>Serial Number:</strong> <%= fox.serialNumber %></p>
+            <p><strong>Details:</strong> <%= fox.details %></p>
+            <p><strong>History:</strong> <%= fox.history %></p>
+            
+        </section>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
