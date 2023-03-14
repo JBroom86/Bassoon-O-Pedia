@@ -5,6 +5,8 @@ const path = require('path');
 const express = require('express');
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
+const methodOverride = require('method-override');
+
 
 
 /* Require the db connection, models, and seed data
@@ -46,6 +48,9 @@ app.use(connectLiveReload());
 // this will take incoming strings from the body that are URL encoded and parse them 
 // into an object that can be accessed in the request parameter as a property called body (req.body).
 app.use(express.urlencoded({ extended: true }));
+// Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
+app.use(methodOverride('_method'));
+
 
 
 
@@ -75,16 +80,15 @@ app.get('/about', function (req, res) {
 });
 
 
-// The "catch-all" route: Runs for any other URL that doesn't match the above routes
-app.get('*', function (req, res) {
-    res.render('404')
-});
-
-
 // This tells our app to look at the `controllers/pets.js` file 
 // to handle all routes that begin with `localhost:3000/bassoons`
 app.use('/bassoons', bsnCtrl)
 
+
+// The "catch-all" route: Runs for any other URL that doesn't match the above routes
+app.get('*', function (req, res) {
+    res.render('404')
+});
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */

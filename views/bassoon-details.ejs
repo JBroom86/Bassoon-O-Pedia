@@ -21,6 +21,16 @@
             
         </section>
         
+        <section class="actions">
+            
+            <button class="btn"><a href="/pets/<%= bassoonFox._id %>/edit">Edit</a></button>
+            <form method="POST" action="/pets/<%= bassoonFox._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+
+        </section>
+        
+
     </div>
 
     <%- include('./partials/footer.ejs') %>
