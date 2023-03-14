@@ -71,13 +71,13 @@ app.get('/seed', function (req, res) {
 });
 
 app.get('/about', function (req, res) {
-    res.send('You\'ve hit the about route')
+    res.render('about')
 });
 
 
 // The "catch-all" route: Runs for any other URL that doesn't match the above routes
 app.get('*', function (req, res) {
-    res.send('404 Error: Page Not Found')
+    res.render('404')
 });
 
 
