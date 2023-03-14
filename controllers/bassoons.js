@@ -29,25 +29,42 @@ router.get('/', function (req, res) {
    
 })
 
+
 // New Route (GET/Read): This route renders a form 
 // which the user will fill out to POST (create) a new location
 router.get('/new', (req, res) => {
-    res.send('You\'ve hit the new route!')
+    res.render('add-bassoon')
 })
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
-// creates a new pet document using the form data, 
+// creates a bassoon pet document using the form data, 
 // and redirects the user to the new pet's show page
 router.post('/', (req, res) => {
     db.Fox.create(req.body)
-        .then(bassoonFox => res.json(bassoonFox))
+        .then(bassoonFox => res.redirect('/bassoons/' + bassoonFox._id))
+})
+
+// Show Route (GET/Read): Will display an individual bassoonFox document
+// using the URL parameter (which is the document _id)
+router.get('/:id', function (req, res) {
+    db.Fox.findById(req.params.id)
+        .then(bassoonFox => { 
+            res.render('bassoon-details', {
+                bassoonFox: bassoonFox
+            })
+        })
+        .catch(() => res.render('404'))
 })
 
 // Edit Route (GET/Read): This route renders a form
 // the user will use to PUT (edit) properties of an existing pet
 router.get('/:id/edit', (req, res) => {
     db.Fox.findById(req.params.id)
-        .then(bassoonFox => res.send('You\'ll be editing bassoon ' + bassoonFox._id))
+        .then(bassoonFox => {
+            res.render('edit-bassoon', {
+                bassoonFox: bassoonFox
+            })
+        })
 })
 
 // Update Route (PUT/Update): This route receives the PUT request sent from the edit route, 
@@ -59,28 +76,17 @@ router.put('/:id', (req, res) => {
         req.body,
         { new: true }
     )
-        .then(bassoonFox => res.json(bassoonFox))
+        .then(bassoonFox => res.redirect('/bassoons/' + bassoonFox._id))
 })
 
 // Destroy Route (DELETE/Delete): This route deletes a pet document 
 // using the URL parameter (which will always be the pet document's ID)
 router.delete('/:id', (req, res) => {
     db.Fox.findByIdAndRemove(req.params.id)
-        .then(bassoonFox => res.send('You\'ve deleted bassoon ' + bassoonFox._id))
+        .then(() => res.redirect('/bassoons'))
 })
 
 
-// Show Route (GET/Read): Will display an individual bassoonFox document
-// using the URL parameter (which is the document _id)
-router.get('/:id', function (req, res) {
-    db.Fox.findById(req.params.id)
-        .then(bassoonFox => { 
-            res.render('bassoon-details', {
-                bassoonFox: bassoonFox
-            })
-        })
-        .catch(() => res.send('404 Error: Page Not Found'))
-})
 
 
 
