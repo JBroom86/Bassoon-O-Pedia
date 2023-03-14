@@ -20,7 +20,13 @@ const db = require('../models')
 --------------------------------------------------------------- */
 // Index Route (GET/Read): Will display all pets
 router.get('/', function (req, res) {
-    res.render('bassoon-index')
+    db.Fox.find({})
+    .then(bassoonFox => {
+        res.render('bassoon-index', {
+            bassoonFox: bassoonFox
+        })
+    })
+   
 })
 
 
@@ -28,9 +34,9 @@ router.get('/', function (req, res) {
 // using the URL parameter (which is the document _id)
 router.get('/:id', function (req, res) {
     db.Fox.findById(req.params.id)
-        .then(fox => {
+        .then(bassoonFox => { 
             res.render('bassoon-details', {
-                bassoonFox: fox
+                bassoonFox: bassoonFox
             })
         })
         .catch(() => res.send('404 Error: Page Not Found'))

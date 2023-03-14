@@ -2,23 +2,25 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/header.ejs', {title: `${fox.model} | Bassoon-O-Pedia`}) %>
-    <link rel="stylesheet" href="/styles/fox-details.css">
+    <%- include('./partials/header.ejs', {title: `${bassoonFox.make} ${bassoonFox.model}, #${bassoonFox.serialNumber} | Bassoon-O-Pedia`}) %>
+    <link rel="stylesheet" href="/styles bassoon-details.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
     <div>
-        <img src="<%= fox.photo %>">
+        
+        <img src=" <%= bassoonFox.photo %>">
         <section>
-            <p><strong>Make:</strong> <%= fox.make %></p>
-            <p><strong>Model:</strong> <%= fox.model %></p>
-            <p><strong>Serial Number:</strong> <%= fox.serialNumber %></p>
-            <p><strong>Details:</strong> <%= fox.details %></p>
-            <p><strong>History:</strong> <%= fox.history %></p>
+            <p><strong>Make:</strong> <%= bassoonFox.make %></p>
+            <p><strong>Model:</strong> <%= bassoonFox.model %></p>
+            <p><strong>Serial Number:</strong> <%= bassoonFox.serialNumber %></p>
+            <p><strong>Details:</strong> <%= bassoonFox.details %></p>
+            <p><strong>History:</strong> <%= bassoonFox.history %></p>
             
         </section>
+        
     </div>
 
     <%- include('./partials/footer.ejs') %>
