@@ -13,7 +13,7 @@ const bassoonFox = [
         details: "Offset-E, RH Eb, 3rd finger plateau",
         serialNumber: 46978,
         history: "Played extensively throughout the world in major symphony orchestra. Most recently owned by a prominent player in a New York.",
-        photo: "https://kingkristopherdotcom.files.wordpress.com/2015/06/dsc_0017.jpg"
+        photo: "https://www.mmimports.com/wp-content/uploads/2012/05/Fox-660-1.jpg"
     },
     {
         make: "Fox/Renard",
