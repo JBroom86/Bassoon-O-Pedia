@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Bassoon-O-Pedia - Media'}) %>
+    <link rel="stylesheet" href="/styles/pet-index.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <main>
+           
+        <section class="listings">
+            <h1>Fox Bassoons</h1>
+            <ul>
+                <% for (let modelvid of modelvids) { %>
+                <li>
+                    <figure>
+                        <video controls>
+                            <source src="<%= modelvid.video %>">
+                        </video>
+                        
+                        <figcaption>
+                            <h4><%= modelvid.playerName %></h4>
+                            <p><%= modelvid.modelPlayed %></p>
+                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+        
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

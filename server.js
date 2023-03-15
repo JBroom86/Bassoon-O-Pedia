@@ -16,7 +16,7 @@ const db = require('./models');
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
 const bsnCtrl = require('./controllers/bassoons')
-const ownersCtrl = require('./controllers/pastowners')
+const vidsCtrl = require('./controllers/bassoonmodelvids')
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -80,10 +80,17 @@ app.get('/about', function (req, res) {
     res.render('about')
 });
 
+// db.ModelVids.create({
+//     playerName: "Stephen Paulson",
+//     video: "https://youtu.be/LC79lWBAlR4",
+//     modelPlayed: "Fox - Model 601"
+// })
+//     .then(modelvids => console.log(modelvids))
+
 // This tells our app to look at the `controllers/pets.js` file 
 // to handle all routes that begin with `localhost:3000/bassoons`
 app.use('/bassoons', bsnCtrl)
-app.use('/pastowners', ownersCtrl)
+app.use('/bassoonmodelvids', vidsCtrl)
 
 
 // The "catch-all" route: Runs for any other URL that doesn't match the above routes
