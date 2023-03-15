@@ -12,5 +12,6 @@ const mongodbUri = process.env.MONGODBURI;
 
 module.exports = {
     Fox: require('./bassoon-fox'),
+    
     seedFox: require('./seed-fox')
 }
