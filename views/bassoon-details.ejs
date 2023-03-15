@@ -3,13 +3,13 @@
 
 <head>
     <%- include('./partials/header.ejs', {title: `${bassoonFox.make} ${bassoonFox.model}, #${bassoonFox.serialNumber} | Bassoon-O-Pedia`}) %>
-    <link rel="stylesheet" href="/styles bassoon-details.css">
+    <link rel="stylesheet" href="/styles/bassoon-details.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
     
-    <div>
+    <div class="container" id="container">
         
         <img src=" <%= bassoonFox.photo %>">
         <section>

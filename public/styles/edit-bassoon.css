@@ -1,0 +1,55 @@
+body {
+    padding-top: 100px;
+}
+
+.photo {
+    max-width: 600px;
+    text-align: center;
+
+}
+
+form {
+    width: 60%;
+    min-width: 300px;
+    margin: 0 auto 2rem auto;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #2E2F2F;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #2E2F2F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #A599B5;
+    color: #2E2F2F;
+    border: 1px solid #2E2F2F;
+}

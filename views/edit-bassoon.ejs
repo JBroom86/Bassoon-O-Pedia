@@ -3,14 +3,15 @@
 
 <head>
     <%- include('./partials/header.ejs', {title: `Edit ${bassoonFox.name} | Bassoon-O-Pedia`}) %>
-    <link rel="stylesheet" href="/styles/pet-form.css">
+    <link rel="stylesheet" href="/styles/edit-bassoon.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <h1>Edit Bassoon</h1>
+    <h1>Edit <%= bassoonFox.make %> <%= bassoonFox.model %></h1>
 
+    
     <form method="POST" action="/pets/<%= bassoonFox._id %>?_method=PUT">
         <!-- Make input -->
         <label for="Make">Make:</label>
@@ -38,7 +39,7 @@
         <input type="text" id="photo" name="photo" value="<%= bassoonFox.photo %>" required>
         <br>
         
-        <input type="submit" value="Add Bassoon">
+        <input type="submit" value="Submit Edits">
     </form>
     
     <%- include('./partials/footer.ejs') %>

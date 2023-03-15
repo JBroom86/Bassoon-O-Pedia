@@ -3,7 +3,7 @@
 
 <head>
     <%- include('./partials/header.ejs', {title: 'Bassoon-O-Pedia'}) %>
-    <link rel="stylesheet" href="/styles/pet-index.css">
+    <link rel="stylesheet" href="/styles/bassoon-index.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                         <img src="<%= fox.photo %>">
                         <figcaption>
                             <h4><%= fox.model %> - #<%= fox.serialNumber %> </h4>
-                            <p><%= fox.make %>, <%= fox.model %></p>
+                            <p><%= fox.make %> - <%= fox.model %></p>
                             <a href="/bassoons/<%= fox._id %>">Learn More</a>
                         </figcaption>
                     </figure>

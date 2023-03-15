@@ -17,9 +17,8 @@
                 <% for (let modelvid of modelvids) { %>
                 <li>
                     <figure>
-                        <video controls>
-                            <source src="<%= modelvid.video %>">
-                        </video>
+                        <iframe src="<%= modelvid.video %>">
+                        </iframe>
                         
                         <figcaption>
                             <h4><%= modelvid.playerName %></h4>

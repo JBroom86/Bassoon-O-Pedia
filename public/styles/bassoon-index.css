@@ -1,0 +1,38 @@
+main {
+    margin: 0 auto;
+    padding: 60px 20px;
+    
+}
+
+h1 {
+    padding-bottom: 20px;
+    
+}
+
+.listings {
+    margin-top: 50px;
+}
+
+.listings ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+.listings li {
+    margin-bottom: 40px;
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.listings li img {
+    max-width: 50%;
+    height: auto;
+}
+
+.listings li a:hover {
+    background-color: #acbdba;
+}

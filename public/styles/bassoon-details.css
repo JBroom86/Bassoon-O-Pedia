@@ -1,0 +1,26 @@
+#container {    
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
+    max-width: 600px;
+
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.btn {
+    height: 50px;
+    width: 75px;
+    background-color: #a599b5;
+    color: #cddddd;
+    border-radius: 15px;
+    
+}
