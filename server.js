@@ -81,9 +81,14 @@ app.get('/about', function (req, res) {
 });
 
 // db.ModelVids.create({
-//     playerName: "Stephen Paulson",
-//     video: "https://youtu.be/LC79lWBAlR4",
-//     modelPlayed: "Fox - Model 601"
+//     playerName: "Matthias Racz & Hans Agreda",
+//     video: "https://www.youtube.com/embed/0xSlEe9i2A4",
+//     modelPlayed: "Fox - Model 680"
+// },
+// {
+//     playerName: "Kristen Wolfe Jenses",
+//     video: "https://www.youtube.com/embed/roCqXn2Ncpo",
+//     modelPlayed: "Fox - Model 685" 
 // })
 //     .then(modelvids => console.log(modelvids))
 
