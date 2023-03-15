@@ -1,5 +1,6 @@
 // Requiring the Mongoose package
 const mongoose = require('mongoose');
+const pastownerSchema = require('./pastowner');
 
 // Fox Bassoon Schema
 const bassoonFoxSchema = new mongoose.Schema({
@@ -8,7 +9,8 @@ const bassoonFoxSchema = new mongoose.Schema({
     details: { type: String, required: true},
     serialNumber: { type: Number, required: true},
     history: { type: String },
-    photo: { type: String }
+    photo: { type: String },
+        pastowners: [pastownerSchema]
 });
 
 // Exporting the schema as a Mongoose model
