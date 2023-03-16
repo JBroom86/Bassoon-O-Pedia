@@ -84,7 +84,7 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: #333;
-    width: 100vw;
+    width: 100%;
 }
 
 footer * {
@@ -93,4 +93,24 @@ footer * {
 
 footer ul {
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #nav-title {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .footer-title {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .nav-links {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        font-size: 12px;
+    }
 }
