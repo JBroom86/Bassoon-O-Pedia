@@ -1,6 +1,6 @@
 # Bassoon-O-Pedia
 
-<img src="appsnapshot.jpg">
+<img src="./public/assets/appsnapshot.jpg">
 
 <h1> Technologies Used </h1>
 <ul>
@@ -22,7 +22,7 @@
 <p>The aoplication was originally going to have a database of musicians linking to specific instruments that they played. However, I was unable to get the routes to populate correctly and display information from the database. Instead of linking musicians to specific instruments I created a "Media" database to store examples of musicians peforming on different types of instruments. I found this solution to be a bit more interesting because if provide an audible example of the capabilites and qualities of the various model types. <em>I may expand on this section in the future to add a feature to where individuals can submit recording of themselves playing various models of bassoons.</em></p>
 
 <h1>Wire Frame</h1>
-<img src="wireframe.jpg">
+<img src="./public/assets/wireframe.jpg">
 
 <h1>Route Table<h1>
-<img src="routetable.jpg">
+<img src="./public/assets/routetable.jpg">
