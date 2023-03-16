@@ -12,7 +12,7 @@
     <h1>Edit <%= bassoonFox.make %> <%= bassoonFox.model %></h1>
 
     
-    <form method="POST" action="/pets/<%= bassoonFox._id %>?_method=PUT">
+    <form method="POST" action="/bassoons/<%= bassoonFox._id %>?_method=PUT">
         <!-- Make input -->
         <label for="Make">Make:</label>
         <input type="text" id="Make" name="Make" value="<%= bassoonFox.make %>" required>

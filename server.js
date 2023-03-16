@@ -81,14 +81,14 @@ app.get('/about', function (req, res) {
 });
 
 // db.ModelVids.create({
-//     playerName: "Matthias Racz & Hans Agreda",
-//     video: "https://www.youtube.com/embed/0xSlEe9i2A4",
-//     modelPlayed: "Fox - Model 680"
+//     playerName: "Robert Williams",
+//     video: "https://www.youtube.com/embed/j4QVhiP1IWk",
+//     modelPlayed: "Fox - Model 601"
 // },
 // {
-//     playerName: "Kristen Wolfe Jenses",
-//     video: "https://www.youtube.com/embed/roCqXn2Ncpo",
-//     modelPlayed: "Fox - Model 685" 
+//     playerName: "Elizabeth Ball Crawford",
+//     video: "https://www.youtube.com/embed/sfaZsja3-ks",
+//     modelPlayed: "Fox - Model 201 - various serial numbers" 
 // })
 //     .then(modelvids => console.log(modelvids))
 
