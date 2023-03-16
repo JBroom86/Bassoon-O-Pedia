@@ -81,14 +81,9 @@ app.get('/about', function (req, res) {
 });
 
 // db.ModelVids.create({
-//     playerName: "Robert Williams",
-//     video: "https://www.youtube.com/embed/j4QVhiP1IWk",
+//     playerName: "Jaquain Sloan",
+//     video: "https://www.youtube.com/embed/WVpya3ubMok",
 //     modelPlayed: "Fox - Model 601"
-// },
-// {
-//     playerName: "Elizabeth Ball Crawford",
-//     video: "https://www.youtube.com/embed/sfaZsja3-ks",
-//     modelPlayed: "Fox - Model 201 - various serial numbers" 
 // })
 //     .then(modelvids => console.log(modelvids))
 
