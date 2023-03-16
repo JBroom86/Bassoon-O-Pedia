@@ -18,7 +18,7 @@ const db = require('../models')
 
 /* Routes
 --------------------------------------------------------------- */
-// Index Route (GET/Read): Will display all pets
+// Index Route (GET/Read): Will display all bassoons
 router.get('/', function (req, res) {
     db.Fox.find({})
     .then(bassoonFox => {
@@ -37,7 +37,7 @@ router.get('/new', (req, res) => {
 })
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
-// creates a bassoon pet document using the form data, 
+// creates a bassoon  document using the form data, 
 // and redirects the user to the new pet's show page
 router.post('/', (req, res) => {
     db.Fox.create(req.body)

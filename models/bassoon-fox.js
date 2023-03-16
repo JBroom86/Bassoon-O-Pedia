@@ -7,7 +7,7 @@ const bassoonFoxSchema = new mongoose.Schema({
     make: { type: String, required: true },
     model: { type: String, required: true },
     details: { type: String, required: true},
-    serialNumber: { type: Number, required: true},
+    serialNumber: { type: Number },
     history: { type: String },
     photo: { type: String }
         // pastowners: [pastownerSchema]

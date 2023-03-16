@@ -62,7 +62,7 @@ app.get('/', function (req, res) {
 
 // When a GET request is sent to `/seed`, the bassoonFox collection is seeded
 app.get('/seed', function (req, res) {
-    // Remove any existing pets
+    // Remove any existing bassoons
     db.Fox.deleteMany({})
         .then(removedFoxBsn => {
             console.log(`Removed ${removedFoxBsn.deletedCount} Fox bassoons`)
@@ -92,7 +92,7 @@ app.get('/about', function (req, res) {
 // })
 //     .then(modelvids => console.log(modelvids))
 
-// This tells our app to look at the `controllers/pets.js` file 
+// This tells our app to look at the `controllers/bassoons.js` file 
 // to handle all routes that begin with `localhost:3000/bassoons`
 app.use('/bassoons', bsnCtrl)
 app.use('/bassoonmodelvids', vidsCtrl)
