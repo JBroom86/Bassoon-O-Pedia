@@ -19,7 +19,7 @@ const db = require('../models')
 
 /* Routes
 --------------------------------------------------------------- */
-// Index Route (GET/Read): Will display all pets
+// Index Route (GET/Read): Will display all bassoon vids
 router.get('/', function (req, res) {
     db.ModelVids.find({})
     .then(modelvids => {

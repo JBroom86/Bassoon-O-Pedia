@@ -57,7 +57,7 @@ router.get('/:id', function (req, res) {
 })
 
 // Edit Route (GET/Read): This route renders a form
-// the user will use to PUT (edit) properties of an existing pet
+// the user will use to PUT (edit) properties of an existing bassoonFox
 router.get('/:id/edit', (req, res) => {
     db.Fox.findById(req.params.id)
         .then(bassoonFox => {
@@ -79,8 +79,8 @@ router.put('/:id', (req, res) => {
         .then(bassoonFox => res.redirect('/bassoons/' + bassoonFox._id))
 })
 
-// Destroy Route (DELETE/Delete): This route deletes a pet document 
-// using the URL parameter (which will always be the pet document's ID)
+// Destroy Route (DELETE/Delete): This route deletes a pbassoonFoxet document 
+// using the URL parameter (which will always be the bassoonFox document's ID)
 router.delete('/:id', (req, res) => {
     db.Fox.findByIdAndRemove(req.params.id)
         .then(() => res.redirect('/bassoons'))
